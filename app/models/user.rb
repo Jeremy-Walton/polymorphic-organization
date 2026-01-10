@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  has_many :subscriptions, as: :subscriber, dependent: :destroy
+  has_many :podcasts, through: :subscriptions, source: :subscribable, source_type: "Podcast"
+  has_many :newspapers, through: :subscriptions, source: :subscribable, source_type: "Newspaper"
+
   has_secure_password
 
   scope :alphabetically, -> { order("lower(name)") }
