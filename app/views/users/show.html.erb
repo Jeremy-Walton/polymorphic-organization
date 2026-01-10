@@ -29,4 +29,22 @@
     <span class="text-pair__title">Email Address:</span>
     <span class="text-pair__subtitle"><%= @user.email_address %></span>
   </div>
+
+  <div class="divider"></div>
+
+  <header class="content-header">
+    <div class="content-header__details">
+      <h2 class="content-header__title">Subscriptions</h2>
+    </div>
+  </header>
+
+  <h3>Podcasts</h3>
+  <div class="flex flex-col gap-md" id="podcasts">
+    <%= render @user.podcasts %>
+  </div>
+
+  <h3>Newspapers</h3>
+  <div class="flex flex-col gap-md" id="newspapers">
+    <%= render @user.newspapers %>
+  </div>
 </div>
