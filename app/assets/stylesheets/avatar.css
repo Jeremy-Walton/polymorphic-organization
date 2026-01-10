@@ -1,0 +1,11 @@
+.avatar {
+  display: grid;
+  place-content: center;
+  text-decoration: none;
+
+  background-color: var(--op-color-neutral-plus-one);
+  color: var(--op-color-neutral-on-plus-one);
+
+  font-weight: var(--op-font-weight-bold);
+  font-size: var(--op-font-large);
+}
