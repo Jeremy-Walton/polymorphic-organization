@@ -1,0 +1,32 @@
+<nav class="breadcrumbs breadcrumbs--large margin-y-md">
+  <%= link_to 'Users', users_path, class: "breadcrumbs__link" %>
+  <div class="breadcrumbs__separator">
+    <span class="material-symbols-outlined icon">chevron_right</span>
+  </div>
+  <span class="breadcrumbs__text">
+    <%= @user.name %>
+  </span>
+</nav>
+
+<header class="content-header">
+  <div class="content-header__details">
+    <h1 class="content-header__title">
+      <%= @user.name %>
+    </h1>
+  </div>
+</header>
+
+<div class="flex flex-col gap-md">
+  <div class="text-pair text-pair--inline">
+    <span class="text-pair__title">First Name:</span>
+    <span class="text-pair__subtitle"><%= @user.first_name %></span>
+  </div>
+  <div class="text-pair text-pair--inline">
+    <span class="text-pair__title">Last Name:</span>
+    <span class="text-pair__subtitle"><%= @user.last_name %></span>
+  </div>
+  <div class="text-pair text-pair--inline">
+    <span class="text-pair__title">Email Address:</span>
+    <span class="text-pair__subtitle"><%= @user.email_address %></span>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<%# locals: (user:, feed: nil) %>
+
+<div class="card card--padded" id="<%= dom_id user %>">
+  <div class="flex items-center justify-between">
+    <div class="flex items-center gap-xs">
+      <%= link_to user, class: "avatar avatar--large" do %>
+        <%= user.initials %>
+      <% end %>
+      <div class="text-pair">
+        <span class="text-pair__title">
+          <%= user.name %>
+          <% if feed.present? %>
+            (<%= user.feed_users.find_by(feed:).role %>)
+          <% end %>
+        </span>
+        <span class="text-pair__subtitle">
+          <%= user.email_address %>
+        </span>
+      </div>
+    </div>
+    <%= link_to user, class: "btn btn--small btn--icon btn--pill btn--no-border" do %>
+      <span class="material-symbols-outlined icon">chevron_right</span>
+      <span class="sr-only">View User</span>
+    <% end %>
+  </div>
+</div>
