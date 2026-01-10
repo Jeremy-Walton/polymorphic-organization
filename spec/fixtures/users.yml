@@ -1,0 +1,20 @@
+gavin:
+  id: <%= ActiveRecord::FixtureSet.identify("gavin", :id) %>
+  name: Gavin O'melia
+  email_address: gavin.omelia@rolemodelsoftware.com
+  password_digest: Password123password
+jeremy:
+  id: <%= ActiveRecord::FixtureSet.identify("jeremy", :id) %>
+  name: Jeremy Walton
+  email_address: jeremy.walton@rolemodelsoftware.com
+  password_digest: Password123password
+john:
+  id: <%= ActiveRecord::FixtureSet.identify("john", :id) %>
+  name: John Calvin Young
+  email_address: john.young@rolemodelsoftware.com
+  password_digest: Password123password
+michael:
+  id: <%= ActiveRecord::FixtureSet.identify("michael", :id) %>
+  name: Michael Hale
+  email_address: michael.hale@rolemodelsoftware.com
+  password_digest: Password123password
