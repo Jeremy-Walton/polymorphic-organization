@@ -33,7 +33,11 @@
           <% end %>
           <%= link_to feeds_path, class: class_names("btn", "btn--no-border", "btn--active": @active_tab == :feeds) do %>
             <span class="material-symbols-outlined icon">list</span>
-            <span>Feed</span>
+            <span>Feeds</span>
+          <% end %>
+          <%= link_to podcasts_path, class: class_names("btn", "btn--no-border", "btn--active": @active_tab == :podcasts) do %>
+            <span class="material-symbols-outlined icon">podcasts</span>
+            <span>Podcasts</span>
           <% end %>
         </nav>
       </div>

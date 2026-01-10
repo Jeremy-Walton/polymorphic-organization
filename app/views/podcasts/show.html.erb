@@ -1,0 +1,24 @@
+<nav class="breadcrumbs breadcrumbs--large margin-y-md">
+  <%= link_to 'Podcasts', podcasts_path, class: "breadcrumbs__link" %>
+  <div class="breadcrumbs__separator">
+    <span class="material-symbols-outlined icon">chevron_right</span>
+  </div>
+  <span class="breadcrumbs__text">
+    <%= @podcast.name %>
+  </span>
+</nav>
+
+<header class="content-header">
+  <div class="content-header__details">
+    <h1 class="content-header__title">
+      <%= @podcast.name %>
+    </h1>
+  </div>
+</header>
+
+<div class="flex flex-col gap-md">
+  <div class="text-pair text-pair--inline">
+    <span class="text-pair__title">Name:</span>
+    <span class="text-pair__subtitle"><%= @podcast.name %></span>
+  </div>
+</div>
