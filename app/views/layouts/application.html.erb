@@ -39,6 +39,10 @@
             <span class="material-symbols-outlined icon">podcasts</span>
             <span>Podcasts</span>
           <% end %>
+          <%= link_to newspapers_path, class: class_names("btn", "btn--no-border", "btn--active": @active_tab == :newspapers) do %>
+            <span class="material-symbols-outlined icon">newspaper</span>
+            <span>Newspapers</span>
+          <% end %>
         </nav>
       </div>
     </div>
