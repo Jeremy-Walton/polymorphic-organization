@@ -24,6 +24,20 @@
   </head>
 
   <body class="app-body">
+    <div class="app__header">
+      <div class="navbar">
+        <nav class="navbar__content navbar__content--justify-start">
+          <%= link_to users_path, class: class_names("btn", "btn--no-border", "btn--active": @active_tab == :users) do %>
+            <span class="material-symbols-outlined icon">people</span>
+            <span>Users</span>
+          <% end %>
+          <%= link_to feeds_path, class: class_names("btn", "btn--no-border", "btn--active": @active_tab == :feeds) do %>
+            <span class="material-symbols-outlined icon">list</span>
+            <span>Feed</span>
+          <% end %>
+        </nav>
+      </div>
+    </div>
     <div class="app__content">
       <%= yield %>
     </div>
