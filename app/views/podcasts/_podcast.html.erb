@@ -1,0 +1,13 @@
+<%# locals: (podcast:) %>
+
+<div class="card card--padded" id="<%= dom_id podcast %>">
+  <div class="flex items-center justify-between">
+    <div class="text-pair">
+      <span class="text-pair__title"><%= podcast.name %></span>
+    </div>
+    <%= link_to podcast, class: "btn btn--small btn--icon btn--pill btn--no-border" do %>
+      <span class="material-symbols-outlined icon">chevron_right</span>
+      <span class="sr-only">View Podcast</span>
+    <% end %>
+  </div>
+</div>
