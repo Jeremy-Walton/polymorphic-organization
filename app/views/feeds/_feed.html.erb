@@ -1,0 +1,13 @@
+<%# locals: (feed:) %>
+
+<div class="card card--padded" id="<%= dom_id feed %>">
+  <div class="flex items-center justify-between">
+    <div class="text-pair">
+      <span class="text-pair__title"><%= feed.name %></span>
+    </div>
+    <%= link_to feed, class: "btn btn--small btn--icon btn--pill btn--no-border" do %>
+      <span class="material-symbols-outlined icon">chevron_right</span>
+      <span class="sr-only">View Feed</span>
+    <% end %>
+  </div>
+</div>
