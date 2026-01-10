@@ -21,4 +21,22 @@
     <span class="text-pair__title">Name:</span>
     <span class="text-pair__subtitle"><%= @podcast.name %></span>
   </div>
+
+  <div class="divider"></div>
+
+  <header class="content-header">
+    <div class="content-header__details">
+      <h2 class="content-header__title">Subscribers</h2>
+    </div>
+  </header>
+
+  <h3>Users</h3>
+  <div class="flex flex-col gap-md" id="users">
+    <%= render @podcast.users.alphabetically %>
+  </div>
+
+  <h3>Feeds</h3>
+  <div class="flex flex-col gap-md" id="feeds">
+    <%= render @podcast.feeds %>
+  </div>
 </div>
