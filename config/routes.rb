@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   resources :users, only: [ :index, :show ]
   resources :feeds, only: [ :index, :show ]
   resources :podcasts, only: [ :index, :show ]
+  resources :newspapers, only: [ :index, :show ]
 end

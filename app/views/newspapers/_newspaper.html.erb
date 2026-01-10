@@ -1,0 +1,13 @@
+<%# locals: (newspaper:) %>
+
+<div class="card card--padded" id="<%= dom_id newspaper %>">
+  <div class="flex items-center justify-between">
+    <div class="text-pair">
+      <span class="text-pair__title"><%= newspaper.name %></span>
+    </div>
+    <%= link_to newspaper, class: "btn btn--small btn--icon btn--pill btn--no-border" do %>
+      <span class="material-symbols-outlined icon">chevron_right</span>
+      <span class="sr-only">View Newspaper</span>
+    <% end %>
+  </div>
+</div>
