@@ -10,9 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_01_10_203921) do
+ActiveRecord::Schema[8.1].define(version: 2026_01_11_204057) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+
+  create_table "feed_users", force: :cascade do |t|
+    t.boolean "active", default: true, null: false
+    t.datetime "created_at", null: false
+    t.bigint "feed_id", null: false
+    t.string "role", default: "member", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["feed_id"], name: "index_feed_users_on_feed_id"
+    t.index ["user_id"], name: "index_feed_users_on_user_id"
+  end
 
   create_table "feeds", force: :cascade do |t|
     t.datetime "created_at", null: false

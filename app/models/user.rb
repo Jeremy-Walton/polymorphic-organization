@@ -3,6 +3,9 @@ class User < ApplicationRecord
   has_many :podcasts, through: :subscriptions, source: :subscribable, source_type: "Podcast"
   has_many :newspapers, through: :subscriptions, source: :subscribable, source_type: "Newspaper"
 
+  has_many :feed_users
+  has_many :feeds, through: :feed_users
+
   has_secure_password
 
   scope :alphabetically, -> { order("lower(name)") }
@@ -21,5 +24,9 @@ class User < ApplicationRecord
 
   def initials
     name.scan(/\b\p{L}/).join.upcase
+  end
+
+  def feed_count
+    feeds.count
   end
 end
