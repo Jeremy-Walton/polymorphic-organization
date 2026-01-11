@@ -1,12 +1,5 @@
 class Feed < ApplicationRecord
-  include Subscriber
-
-  has_many :feed_users
-  has_many :users, through: :feed_users
+  include Memberable, Subscriber
 
   validates :name, presence: true
-
-  def member_count
-    users.count
-  end
 end
