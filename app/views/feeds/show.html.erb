@@ -21,6 +21,22 @@
     <span class="text-pair__title">Name:</span>
     <span class="text-pair__subtitle"><%= @feed.name %></span>
   </div>
+  <div class="text-pair text-pair--inline">
+    <span class="text-pair__title">Members:</span>
+    <span class="text-pair__subtitle"><%= @feed.member_count %></span>
+  </div>
+
+  <div class="divider"></div>
+
+  <header class="content-header">
+    <div class="content-header__details">
+      <h2 class="content-header__title">Members</h2>
+    </div>
+  </header>
+
+  <div class="flex flex-col gap-md" id="users">
+    <%= render @feed.users.alphabetically, feed: @feed %>
+  </div>
 
   <div class="divider"></div>
 
